@@ -13,7 +13,7 @@ function BreweryPage(){
  
 
   useEffect(() => {
-    fetch(`https://api.openbrewerydb.org/breweries/${id}`)
+    fetch(`http://localhost:3000/breweries/${id}`)
       .then((r) => r.json())
       .then((brewery) => {
         setBrewery(brewery);

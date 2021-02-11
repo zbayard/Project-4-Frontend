@@ -18,7 +18,7 @@ function App() {
   const filteredBreweries = breweries.filter(brewery=> brewery.city.toLowerCase().includes(search.toLowerCase()))
 
   useEffect(()=>{
-    fetch('https://api.openbrewerydb.org/breweries')
+    fetch("http://localhost:3000/breweries")
     .then(res=>res.json())
     .then(data=>setBreweries(data))
   },[])
