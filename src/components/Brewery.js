@@ -17,7 +17,7 @@ function Brewery ({brewery}) {
           <h1>{name}</h1>
           <p>Type: {brewery_type}</p>
           <p>Located: {street}, in {city}, {state}</p>
-          <p>Website: {website_url}</p>
+          Website: <a href={website_url} target='_blank'> {website_url}</a>
           <p>
             <Link to={`/breweries/${id}`}>{`Check out ${name}`}</Link>
           </p>

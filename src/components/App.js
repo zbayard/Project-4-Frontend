@@ -4,6 +4,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import Header from './Header.js'
 import Login from './Login.js'
+import SignUp from './SignUp.js'
 import Profile from './Profile.js'
 import BreweryList from './BreweryList.js'
 import BreweryPage from './BreweryPage.js'
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login/>
+          </Route>
+          <Route exact path="/signup">
+            <SignUp/>
           </Route>
           <Route exact path="/breweries">
             <BreweryList breweries={filteredBreweries} />

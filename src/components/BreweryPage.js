@@ -37,7 +37,7 @@ function BreweryPage(){
             <p>{postal_code}</p>
             <p>{country}</p>
             <p>{phone}</p>
-            <p>{website_url}</p>
+            <a href={website_url} target='_blank'> {website_url}</a>
 
             <ReviewList/>
             <BeerList/> 
