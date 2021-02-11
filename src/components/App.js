@@ -3,9 +3,10 @@ import {Switch, Route} from 'react-router-dom'
 import logo from '../logo.svg';
 import '../App.css';
 import Header from './Header.js'
-
+import Login from './Login.js'
 import Profile from './Profile.js'
 import BreweryList from './BreweryList.js'
+import BreweryPage from './BreweryPage.js'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const filteredBreweries = breweries.filter(brewery=> brewery.city.toLowerCase().includes(search.toLowerCase()))
 
   useEffect(()=>{
-    fetch('https://api.openbrewerydb.org/breweries?page=#%7Bi%7D&per_page=50')
+    fetch('https://api.openbrewerydb.org/breweries')
     .then(res=>res.json())
     .then(data=>setBreweries(data))
   },[])
@@ -27,14 +28,21 @@ function App() {
     <>
       <div className="App">
         <Header search={search} setSearch={setSearch}/>
+       
         
       
         <Switch>
           <Route exact path="/profile">
             <Profile/>
           </Route>
+          <Route exact path="/login">
+            <Login/>
+          </Route>
           <Route exact path="/breweries">
             <BreweryList breweries={filteredBreweries} />
+          </Route>
+          <Route path="/breweries/:id">
+            <BreweryPage />
           </Route>
         </Switch>
       </div>
