@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from 'react'
+import {Switch, Route} from 'react-router-dom'
 import logo from '../logo.svg';
 import '../App.css';
 import Header from './Header.js'
-import NavBar from './NavBar.js'
+
 import Profile from './Profile.js'
 import BreweryList from './BreweryList.js'
 
@@ -23,15 +24,21 @@ function App() {
   console.log(breweries)
 
   return (
-    <div className="App">
-      <Header search={search} setSearch={setSearch}/>
+    <>
+      <div className="App">
+        <Header search={search} setSearch={setSearch}/>
+        
       
-      <NavBar/>
-      <Profile/>
-      <BreweryList breweries={filteredBreweries} />
-      
-
-    </div>
+        <Switch>
+          <Route exact path="/profile">
+            <Profile/>
+          </Route>
+          <Route exact path="/breweries">
+            <BreweryList breweries={filteredBreweries} />
+          </Route>
+        </Switch>
+      </div>
+    </>
   );
 }
 
