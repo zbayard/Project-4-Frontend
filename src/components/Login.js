@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 
-function Login(){
+function Login({setUser}){
 
     const [formData, setFormData] = useState({
         username: '',
@@ -14,6 +14,14 @@ function Login(){
 
     function handleSubmit(e) {
         e.preventDefault()
+
+        fetch('http://localhost:3000/login', {
+            method: 'POST',
+        })
+        .then(r => r.json())
+        .then((user) => {
+            setUser(user)
+        })
     }
 
     return(
