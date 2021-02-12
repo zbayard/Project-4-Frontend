@@ -5,7 +5,7 @@ function Login({setUser}){
 
     const [formData, setFormData] = useState({
         username: '',
-        password: '',
+        password: ''
     })
    
     function handleChange(e) {
@@ -29,8 +29,8 @@ function Login({setUser}){
         
          <form onSubmit ={handleSubmit} className='Login'>
             <input type='text' placeholder='username' value={formData.username} onChange={handleChange}></input>
-            <input type='text' placeholder='password'></input>
-            <Link to='/breweries'>Login</Link>
+            <input type='text' placeholder='password' value={formData.password} onChange={handleChange}></input>
+            <Link type='submit' to='/breweries'>Login</Link>
         </form>
 
         <div>

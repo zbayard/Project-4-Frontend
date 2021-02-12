@@ -13,7 +13,9 @@ function Brewery ({brewery}) {
 
   const {id, name, brewery_type, city, state, street, website_url} = brewery
     return (
-      <div className="Brewery">
+      // <div className="Brewery">
+      <div className='ui four cards'>
+        <div className='card'>
           <h1>{name}</h1>
           <p>Type: {brewery_type}</p>
           <p>Located: {street}, in {city}, {state}</p>
@@ -21,8 +23,7 @@ function Brewery ({brewery}) {
           <p>
             <Link to={`/breweries/${id}`}>{`Check out ${name}`}</Link>
           </p>
-        
-
+        </div>
       </div>
     );
   }

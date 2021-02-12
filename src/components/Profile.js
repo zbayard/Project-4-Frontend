@@ -1,3 +1,5 @@
+import React,{useState} from 'react'
+
 function Profile({user, setUser}) {
 
   const { username, name, bio, image} = user

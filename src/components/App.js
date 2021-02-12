@@ -38,10 +38,9 @@ function App() {
   return (
     <>
       <div className="App">
-        <Header search={search} setSearch={setSearch} user={user}/>
+        <Header search={search} setSearch={setSearch} user={user} setUser={setUser}/>
        
-        
-      
+  
         <Switch>
           <Route exact path="/profile">
             { user ? (

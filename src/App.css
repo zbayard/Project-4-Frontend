@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+ 
 }
 
 .App-logo {
@@ -12,9 +13,38 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.BreweryList{
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  
+}
 
 .Header {
+  padding: 2rem;
+  grid-column: 1/4;
   background-color: #282c34;
+}
+
+.Brewery{
+  width: clamp(23ch, 50%, 46);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  
+  
+}
+
+.ReviewList{
+  grid-column: 1/2;
+}
+.BreweryPage{
+  
+}
+
+
+
+/* .Header {
+  
   min-height: 30px;
   display: flex;
   flex-direction: column;
@@ -22,7 +52,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .SearchBar{
   padding: 20px;
