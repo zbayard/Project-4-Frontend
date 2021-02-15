@@ -1,35 +1,36 @@
-import React,{useState} from 'react'
+import React  from 'react'
 
-function Profile({user, setUser}) {
+function Profile({user, /*setUser*/}) {
 
   const { username, name, bio, image} = user
 
-  const [formData, setFormData] = useState({
-    username, 
-    name, 
-    bio, 
-    image
-  })
+  // const [formData, setFormData] = useState({
+  //   username, 
+  //   name, 
+  //   bio, 
+  //   image
+  // })
 
-  function handleChange(e) {
-    setFormData({
-      ...FormData, 
-      [e.target.name]: e.target.value
-    })
-  }
+  // function handleChange(e) {
+  //   setFormData({
+  //     ...FormData, 
+  //     [e.target.name]: e.target.value
+  //   })
+  // }
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    fetch('http://localhost:3000/profile', {
-      method: 'PATCH', 
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then((r) => r.json())
-    .then(data => setUser(user))
-  }
+  // function handleSubmit(e) {
+  //   e.preventDefault()
+  //   fetch('http://localhost:3000/profile', {
+  //     method: 'PATCH', 
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(formData)
+  //   })
+  //   .then((r) => r.json())
+  //   .then(data => setUser(user))
+  // }
+
     return (
       <div className="Profile">
         <h1>PROFILE </h1>

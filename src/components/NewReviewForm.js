@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function NewReviewForm({onAddReview}) {
+function NewReviewForm({user, breweryID, onAddReview}) {
 
     
     const [content, setContent] = useState('')
@@ -9,6 +9,10 @@ function NewReviewForm({onAddReview}) {
         e.preventDefault()
 
         const newReview = {
+            user_id: user.id,
+            brewery_id: breweryID,
+            rating: 0,
+            likes: 0,
             content 
         }
 
@@ -28,7 +32,8 @@ function NewReviewForm({onAddReview}) {
     return (
         <div className="ReviewForm">
           <h5>Leave a Review:</h5>
-          <form>
+          <form onSubmit={handleSubmitReview}>
+            
             <input value={content} onChange={e=> setContent(e.target.value)} type='textarea' placeholder='leave a comment about this brewery'/>
             <button type='submit'>Submit</button>
           </form>

@@ -33,8 +33,6 @@ function App() {
     .then(data=>setBreweries(data))
   },[])
 
-  console.log(breweries)
-
   return (
     <>
       <div className="App">
@@ -57,7 +55,7 @@ function App() {
             <BreweryList breweries={filteredBreweries} />
           </Route>
           <Route path="/breweries/:id">
-            <BreweryPage />
+            <BreweryPage user={user} />
           </Route>
         </Switch>
       </div>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 // import ReviewList from "./ReviewList"
 // import BeerList from "./BeerList"
@@ -7,9 +7,6 @@ import {Link} from 'react-router-dom'
 
 function Brewery ({brewery}) {
 
-  // const [isClicked, setIsClicked] = useState(false)
-
-  
 
   const {id, name, brewery_type, city, state, street, website_url} = brewery
     return (
