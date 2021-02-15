@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 
-function Login(){
+function Login({setUser}){
 
     const [formData, setFormData] = useState({
         username: '',
-        password: '',
+        password: ''
     })
    
     function handleChange(e) {
@@ -14,6 +14,14 @@ function Login(){
 
     function handleSubmit(e) {
         e.preventDefault()
+
+        fetch('http://localhost:3000/login', {
+            method: 'POST',
+        })
+        .then(r => r.json())
+        .then((user) => {
+            setUser(user)
+        })
     }
 
     return(
@@ -21,8 +29,8 @@ function Login(){
         
          <form onSubmit ={handleSubmit} className='Login'>
             <input type='text' placeholder='username' value={formData.username} onChange={handleChange}></input>
-            <input type='text' placeholder='password'></input>
-            <Link to='/breweries'>Login</Link>
+            <input type='text' placeholder='password' value={formData.password} onChange={handleChange}></input>
+            <Link type='submit' to='/breweries'>Login</Link>
         </form>
 
         <div>
