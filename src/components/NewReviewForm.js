@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
+import {Button, Form} from 'semantic-ui-react'
 
-function NewReviewForm({user, breweryID, onAddReview}) {
+function NewReviewForm({user, breweryID, onAddReview, setReviewClick}) {
 
     
     const [content, setContent] = useState('')
@@ -27,21 +28,31 @@ function NewReviewForm({user, breweryID, onAddReview}) {
         .then(data => {
             onAddReview(data)
         })
+
+        setReviewClick(false)
+        
+
     }
 
     return (
-        <div className="ReviewForm">
-          <h5>Leave a Review:</h5>
-          <form onSubmit={handleSubmitReview}>
-            
-            <input value={content} onChange={e=> setContent(e.target.value)} type='textarea' placeholder='leave a comment about this brewery'/>
-            <button type='submit'>Submit</button>
-          </form>
-        </div>
+        
+        <Form reply onSubmit={handleSubmitReview}>
+          <Form.TextArea value={content} onChange={e=> setContent(e.target.value)}  />
+          <Button basic color='black' type='submit' content='Add Review' labelPosition='left' icon='edit' primary />
+        </Form>
+  
       );
 }
   
   export default NewReviewForm;
 
 
-  
+
+  // <div className="ReviewForm">
+  //         <h5>Leave a Review:</h5>
+  //         <form onSubmit={handleSubmitReview}>
+            
+  //           <input value={content} onChange={e=> setContent(e.target.value)} type='textarea' placeholder='leave a comment about this brewery'/>
+  //           <button type='submit'>Submit</button>
+  //         </form>
+  // </div>

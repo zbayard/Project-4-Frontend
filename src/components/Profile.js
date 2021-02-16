@@ -1,4 +1,5 @@
 import React  from 'react'
+import { Card, Image } from 'semantic-ui-react'
 
 function Profile({user, /*setUser*/}) {
 
@@ -32,17 +33,34 @@ function Profile({user, /*setUser*/}) {
   // }
 
     return (
-      <div className="Profile">
-        <h1>PROFILE </h1>
-        <p>{username}</p>
-        <img src={image} alt="image here"></img>
-        <p>{name}</p>
-        <p>{bio}</p>
-        <p>favorite breweries</p>
-        <p>uploaded beers?</p>
-        
-      </div>
+
+    <Card centered>
+      <Image src={image} wrapped ui={false} />
+      <Card.Content>
+        <Card.Header>{name}</Card.Header>
+        <Card.Meta>
+          <span className='username'>Username: {username}</span>
+        </Card.Meta>
+        <Card.Description>
+          {bio}
+        </Card.Description>
+      </Card.Content>
+  </Card>
+
+ 
     );
   }
   
   export default Profile;
+
+
+//   <div className="Profile">
+//   <h1>PROFILE </h1>
+//   <p>{username}</p>
+//   <img src={image} alt="image here"></img>
+//   <p>{name}</p>
+//   <p>{bio}</p>
+//   <p>favorite breweries</p>
+//   <p>uploaded beers?</p>
+  
+// </div>

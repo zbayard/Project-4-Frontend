@@ -1,12 +1,65 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Form, Grid, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 function SignUp(){
+
+    function handleSubmit(e){
+        e.preventDefault()
+        console.log('hello')
+    }
 
    
 
     return(
-    <div className='SignUp'>
+        <Segment placeholder>
+            <Grid columns={1} relaxed='very' stackable>
+            <Grid.Column>
+            <Form onSubmit ={handleSubmit}>
+                <Form.Input
+                icon='user'
+                iconPosition='left'
+                label='Name'
+                />
+                <Form.Input
+                icon='user'
+                iconPosition='left'
+                label='Username'
+                />
+                <Form.Input
+                icon='lock'
+                iconPosition='left'
+                label='Password'
+                />
+                <Form.Input
+                icon='images'
+                iconPosition='left'
+                label='Image'
+                />
+                <Form.Input
+                icon='vcard'
+                iconPosition='left'
+                label='Bio'
+                />
+
+                {/* <Button basic color='yellow' content='Login'  /> */}
+                <Link basic color='yellow' type='submit' to='/breweries'>Check Out Breweries!</Link>
+            </Form>
+            </Grid.Column>
+            </Grid>
+        </Segment>
+    );
+};
+
+export default SignUp;
+
+
+
+
+
+
+
+/* <div className='SignUp'>
         
          <form className='SignUp'>
          <input type='text' placeholder='Name'></input>
@@ -19,8 +72,4 @@ function SignUp(){
 
        
        
-    </div>
-    );
-};
-
-export default SignUp;
+    </div> */

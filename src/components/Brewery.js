@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 function Brewery ({brewery}) {
 
 
-  const {id, name, brewery_type, city, state, street, website_url} = brewery
+  const {id, name, brewery_type, city, state, website_url} = brewery
     return (
       // <div className="Brewery">
       <Card>

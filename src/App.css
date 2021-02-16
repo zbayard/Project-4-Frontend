@@ -2,7 +2,8 @@
 
 .App {
   text-align: center;
- 
+  background-color: rgb(226, 156, 26);
+  background-position: static;
 }
 
 .App-logo {
@@ -27,11 +28,15 @@ img {
   width: 9vh;
 }
 
+#logo {
+  height: 250px;
+  width: 250px;
+}
 
 .Header {
-  padding: 2rem;
-  grid-column: 1/4;
-  background-color: #282c34;
+  padding: 1rem;
+  grid-column: 1/2;
+  background-color: #13151a;
 }
 
 .Brewery{
@@ -39,17 +44,26 @@ img {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  
+}
+
+.brewerypage {
+  padding: 100px !important;
   
 }
 
-.ReviewList{
-  grid-column: 1/2;
+.reviewlist {
+  padding: 50px !important;
 }
 
-.BreweryPage{
+.beerlist {
+  padding: 50px !important;
   
 }
+
+
+
+
+
 
 
 
@@ -68,9 +82,9 @@ img {
   padding: 20px;
 }
 
-.Login{
+/* .Login{
   padding: 100px;
-}
+} */
 
 .App-link {
   color: #61dafb;

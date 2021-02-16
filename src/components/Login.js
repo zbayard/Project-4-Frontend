@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Divider, Form, Grid, Segment } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 function Login({setUser}){
@@ -25,20 +26,47 @@ function Login({setUser}){
     }
 
     return(
-    <div className='Login'>
-        
-         <form onSubmit ={handleSubmit} className='Login'>
-            <input type='text' placeholder='username' value={formData.username} onChange={handleChange}></input>
-            <input type='text' placeholder='password' value={formData.password} onChange={handleChange}></input>
-            <Link type='submit' to='/breweries'>Login</Link>
-        </form>
 
-        <div>
+        <Segment placeholder>
+        <Grid columns={1} relaxed='very' stackable>
+          <Grid.Column>
+            <Form onSubmit ={handleSubmit}>
+              <Form.Input
+                icon='user'
+                iconPosition='left'
+                label='Username'
+                placeholder='Username'
+                value={formData.username} 
+                onChange={handleChange}
+              />
+              <Form.Input
+                icon='lock'
+                iconPosition='left'
+                label='Password'
+                type='password'
+                placeholder='Password'
+                value={formData.password} 
+                onChange={handleChange}
+              />
+    
+              {/* <Button basic color='yellow' content='Login'  /> */}
+              <Link basic color='yellow' type='submit' to='/breweries'>Login</Link>
+            </Form>
+          </Grid.Column>
+
+        <Divider horizontal></Divider>
+    
+          <Grid.Column verticalAlign='middle'>
+            {/* <Button basic color='olive' content='Sign up' icon='signup' size='medium' /> */}
             Don't have an account? <Link to='/signup'>Sign Up</Link>
-        </div> 
-       
-    </div>
+          </Grid.Column>
+        </Grid>
+    
+        
+      </Segment>
+    
     );
 };
 
 export default Login;
+
