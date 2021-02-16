@@ -41,7 +41,7 @@ function BeerList({user, id}) {
 
     return (
       <div className="BeerList">
-          <h1>Beer List</h1>
+          <h3>Beer featured at this location </h3>
         <button onClick={handleClick}>Show/Hide new beer form</button>
         {isClicked ? <NewBeerForm id={id} user={user} addNewBeer={addNewBeer}/> : null}
         {beersToDisplay}

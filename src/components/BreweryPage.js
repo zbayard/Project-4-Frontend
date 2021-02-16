@@ -54,14 +54,10 @@ function BreweryPage({user}){
     return(
         <div className='BreweryPage'>
             <h1>{name}</h1>
-            <p>{brewery_type}</p>
-            <p>{street}</p>
-            <p>{city}</p>
-            <p>{state}</p>
-            <p>{postal_code}</p>
-            <p>{country}</p>
-            <p>{phone}</p>
-            <a href={website_url} target='_blank'> {website_url}</a>
+            <p><strong>Type:</strong> {brewery_type}</p>
+            <p><strong>Address</strong>  {street} - {city}, {state} {postal_code}</p>
+            <p><strong>Phone:</strong>  {phone} </p>
+            <a href={website_url} target='_blank'>Visit Website</a>
 
             <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview}/>
             <BeerList id={id} user={user}/> 
