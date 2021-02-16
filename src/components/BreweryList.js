@@ -1,4 +1,5 @@
 import Brewery from './Brewery.js'
+import { Card } from  'semantic-ui-react'
 
 function BreweryList({breweries}){
 
@@ -9,8 +10,7 @@ function BreweryList({breweries}){
 
     return(
         <div className='BreweryList'>
-            <h1> Brewery List</h1>
-            {breweriesToDisplay}
+            <Card.Group itemsPerRow={3}> {breweriesToDisplay} </Card.Group>
         </div>
         
     )

@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
  
@@ -13,11 +15,18 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .BreweryList{
   display: grid;
   grid-template: auto 1fr auto / auto 1fr auto;
   
 }
+
+img {
+  height: 15vh;
+  width: 9vh;
+}
+
 
 .Header {
   padding: 2rem;
@@ -37,6 +46,7 @@
 .ReviewList{
   grid-column: 1/2;
 }
+
 .BreweryPage{
   
 }

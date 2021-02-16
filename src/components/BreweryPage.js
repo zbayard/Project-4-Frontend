@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Icon } from 'semantic-ui-react'
 import { useParams } from "react-router-dom";
 import ReviewList from './ReviewList.js'
 import BeerList from './BeerList.js'
@@ -54,10 +55,10 @@ function BreweryPage({user}){
     return(
         <div className='BreweryPage'>
             <h1>{name}</h1>
-            <p><strong>Type:</strong> {brewery_type}</p>
-            <p><strong>Address</strong>  {street} - {city}, {state} {postal_code}</p>
-            <p><strong>Phone:</strong>  {phone} </p>
-            <a href={website_url} target='_blank'>Visit Website</a>
+            <p><Icon name='beer' />{brewery_type}</p>
+            <p><Icon name='map marker alternate'/> {street} - {city}, {state} {postal_code}</p>
+            <p><Icon name='phone'/>   {phone} </p>
+            <p><Icon name='address card outline'/><a href={website_url} target='_blank'>Visit Website</a></p>
 
             <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview}/>
             <BeerList id={id} user={user}/> 
