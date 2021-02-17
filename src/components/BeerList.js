@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import Beer from "./Beer"
 import NewBeerForm from "./NewBeerForm"
-import {Button} from 'semantic-ui-react'
+import {Button, Header} from 'semantic-ui-react'
 
 function BeerList({user, id}) {
 
@@ -42,7 +42,9 @@ function BeerList({user, id}) {
 
     return (
       <div className="BeerList">
-          <h3>Beer featured at this location </h3>
+           <Header as='h2' dividing>
+            Featured Beers
+          </Header>
         {beersToDisplay}
         <Button basic color='black' onClick={handleClick}>Add a Beer!</Button>
         {isClicked ? <NewBeerForm id={id} user={user} addNewBeer={addNewBeer}/> : null}
@@ -51,3 +53,8 @@ function BeerList({user, id}) {
   }
   
   export default BeerList;
+
+
+  <Header as='h2' dividing>
+  Beer featured here 
+</Header>

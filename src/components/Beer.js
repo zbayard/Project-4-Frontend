@@ -7,10 +7,11 @@ function Beer({beer}){
 <Item.Group>
     <Item>
       <Item.Image size='tiny' src={beer.image} />
-      <Item.Content>
+      <Item.Content text align='left'>
         <Item.Header as='a'>{beer.name}</Item.Header>
-        <Item.Meta>ABV: {beer.abv}% Style: {beer.style}</Item.Meta>
+        <Item.Meta>Style: {beer.style} </Item.Meta>
         <Item.Description>
+          ABV: {beer.abv}%
         <Item.Extra>{beer.comment}</Item.Extra>
           
         </Item.Description>
@@ -33,3 +34,6 @@ export default Beer;
 <p>{beer.comment}</p>
 
 </div> */}
+
+
+// TODO: Fonts, Scroll, style our search, Beer Form, Fix Api Seed(render more breweries), navbar links, fix login,

@@ -16,13 +16,7 @@ function NavBar({user, setUser}) {
             <Link to="/profile"> Profile </Link>
             <Link to='/login' onClick={handleLogout}> Logout </Link>
           </>
-        ) : ( 
-          <>
-            <Link to="/login"> Login </Link>
-            <Link to="/signup"> Signup </Link>
-          </>
-        )}
-       
+        ) : null }
         
       </nav>
     

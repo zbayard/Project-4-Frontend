@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
-import { Button, Comment } from 'semantic-ui-react'
+import { Button, Comment, Rating} from 'semantic-ui-react'
+
 
 function Review({reviewObj, user, onDeleteReview}) {
 
   const { name, image} = user
 
   console.log(user)
-  const {likes, id, content } = reviewObj
+  const {likes, id, content, rating } = reviewObj
   const [likeCount, setLikeCount] = useState(likes)
 
   function handleDeleteClick(){
@@ -37,21 +38,22 @@ function Review({reviewObj, user, onDeleteReview}) {
     })
   }
 
+ 
     return (
 
       
        
-        <Comment>
+        <Comment text align='left'>
           <Comment.Avatar src={image} />
           <Comment.Content>
             <Comment.Author as='a'>{name}</Comment.Author>
-            {/* <Comment.Metadata>
-              <div>Today at 5:42PM</div>
-            </Comment.Metadata> */}
             <Comment.Text>{content}</Comment.Text>
+            <p>
+              <Rating defaultRating={rating} maxRating={5} disabled />
+            </p>
             <Comment.Actions>
-              <Button basic color='black' onClick={handleLike}>{likeCount} 👍</Button>
-              <Button basic color='black' onClick={handleDeleteClick}> Delete Comment </Button>
+              <Button size='mini' basic color='black' onClick={handleLike}>{likeCount} Likes </Button>
+              <Button size='mini'basic color='black' onClick={handleDeleteClick}> Delete Comment </Button>
             </Comment.Actions>
           </Comment.Content>
         </Comment>

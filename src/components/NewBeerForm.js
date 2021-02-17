@@ -39,7 +39,6 @@ function NewBeerForm({addNewBeer, user, id}) {
 
     return (
       <div className="BeerForm">
-        <h1>BEER FORM</h1>
         <form onSubmit={handleSubmit}>
           <input value={name} onChange={e=> setName(e.target.value)} type='text' placeholder='name'/>
           <input value={abv} onChange={e=> setAbv(e.target.value)} type="text" placeholder="abv"/>

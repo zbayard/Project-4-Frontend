@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
-import {Button, Form} from 'semantic-ui-react'
+import {Button, Form, Rating} from 'semantic-ui-react'
 
 function NewReviewForm({user, breweryID, onAddReview, setReviewClick}) {
 
     
     const [content, setContent] = useState('')
+    const [rating, setRating] = useState(0)
     
     function handleSubmitReview(e){
         e.preventDefault()
@@ -12,7 +13,7 @@ function NewReviewForm({user, breweryID, onAddReview, setReviewClick}) {
         const newReview = {
             user_id: user.id,
             brewery_id: breweryID,
-            rating: 0,
+            rating: parseInt(rating),
             likes: 0,
             content 
         }
@@ -30,13 +31,20 @@ function NewReviewForm({user, breweryID, onAddReview, setReviewClick}) {
         })
 
         setReviewClick(false)
-        
-
     }
+
+    function handleRateChange(e, { rating }) {
+        e.preventDefault();
+        setRating(rating);
+      }
 
     return (
         
         <Form reply onSubmit={handleSubmitReview}>
+            <h4> Rate this brewery: 
+                
+                <Rating size='huge' maxRating={5} clearable value={rating} onRate={handleRateChange}/>
+            </h4>
           <Form.TextArea value={content} onChange={e=> setContent(e.target.value)}  />
           <Button basic color='black' type='submit' content='Add Review' labelPosition='left' icon='edit' primary />
         </Form>

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Divider, Form, Grid, Segment } from 'semantic-ui-react'
+import { Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 function Login({setUser}){
@@ -27,7 +27,7 @@ function Login({setUser}){
 
     return(
 
-        <Segment placeholder>
+       <Segment placeholder>
         <Grid columns={1} relaxed='very' stackable>
           <Grid.Column>
             <Form onSubmit ={handleSubmit}>
@@ -48,25 +48,26 @@ function Login({setUser}){
                 value={formData.password} 
                 onChange={handleChange}
               />
-    
+              {/* <Button type='submit' basic color='yellow' as="Link" to="/breweries">Login</Button> */}
               {/* <Button basic color='yellow' content='Login'  /> */}
               <Link basic color='yellow' type='submit' to='/breweries'>Login</Link>
             </Form>
           </Grid.Column>
-
+        
         <Divider horizontal></Divider>
-    
+        
           <Grid.Column verticalAlign='middle'>
             {/* <Button basic color='olive' content='Sign up' icon='signup' size='medium' /> */}
             Don't have an account? <Link to='/signup'>Sign Up</Link>
           </Grid.Column>
         </Grid>
-    
-        
-      </Segment>
+      
+      </Segment> 
     
     );
 };
 
 export default Login;
+
+
 

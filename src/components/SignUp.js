@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Grid, Segment } from 'semantic-ui-react'
+import { Form, Grid, Segment, Divider } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 function SignUp(){
@@ -30,6 +30,7 @@ function SignUp(){
                 icon='lock'
                 iconPosition='left'
                 label='Password'
+                type='password'
                 />
                 <Form.Input
                 icon='images'
@@ -46,6 +47,13 @@ function SignUp(){
                 <Link basic color='yellow' type='submit' to='/breweries'>Check Out Breweries!</Link>
             </Form>
             </Grid.Column>
+
+            <Divider horizontal></Divider>
+        
+          <Grid.Column verticalAlign='middle'>
+            {/* <Button basic color='olive' content='Sign up' icon='signup' size='medium' /> */}
+            Already have an account? <Link to='/login'>Sign In</Link>
+          </Grid.Column>
             </Grid>
         </Segment>
     );
