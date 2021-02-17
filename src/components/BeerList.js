@@ -47,14 +47,10 @@ function BeerList({user, id}) {
           </Header>
         {beersToDisplay}
         <Button basic color='black' onClick={handleClick}>Add a Beer!</Button>
-        {isClicked ? <NewBeerForm id={id} user={user} addNewBeer={addNewBeer}/> : null}
+        {isClicked ? <NewBeerForm setIsClicked={setIsClicked} id={id} user={user} addNewBeer={addNewBeer}/> : null}
       </div>
     );
   }
   
   export default BeerList;
 
-
-  <Header as='h2' dividing>
-  Beer featured here 
-</Header>

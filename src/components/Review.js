@@ -52,8 +52,8 @@ function Review({reviewObj, user, onDeleteReview}) {
               <Rating defaultRating={rating} maxRating={5} disabled />
             </p>
             <Comment.Actions>
-              <Button size='mini' basic color='black' onClick={handleLike}>{likeCount} Likes </Button>
-              <Button size='mini'basic color='black' onClick={handleDeleteClick}> Delete Comment </Button>
+              <Button size='mini' basic color='black' onClick={handleLike}>{likeCount} ♥️ </Button>
+              <Button size='mini' basic color='black' onClick={handleDeleteClick}> ✖︎ </Button>
             </Comment.Actions>
           </Comment.Content>
         </Comment>

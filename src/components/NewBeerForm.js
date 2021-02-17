@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
+import { Form, Button, Divider} from 'semantic-ui-react'
 
-function NewBeerForm({addNewBeer, user, id}) {
+function NewBeerForm({setIsClicked, addNewBeer, user, id}) {
 
   const [name, setName] = useState('')
   const [abv, setAbv] = useState('')
@@ -35,11 +36,28 @@ function NewBeerForm({addNewBeer, user, id}) {
       addNewBeer(data)
     })
 
+    setIsClicked(false)
+
   }
 
     return (
-      <div className="BeerForm">
-        <form onSubmit={handleSubmit}>
+      <Form reply onSubmit={handleSubmit}>
+        <Divider horizontal></Divider>
+          <Form.Input placeholder='name' value={name} onChange={e=> setName(e.target.value)}/>
+          <Form.Input placeholder='abv' value={abv} onChange={e=> setAbv(e.target.value)}/>
+          <Form.Input placeholder='style' value={style} onChange={e=> setStyle(e.target.value)}/>
+          <Form.Input placeholder='comment' value={comment} onChange={e=> setComment(e.target.value)}/>
+          <Form.Input placeholder='image' value={image} onChange={e=> setImage(e.target.value)}/>
+          <Button type='submit' content='Cheers!' labelPosition='left' icon='beer' color='white' basic color='black' />
+    </Form>
+          
+    );
+  }
+  
+  export default NewBeerForm
+
+  // <div className="BeerForm">
+        {/* <form onSubmit={handleSubmit}>
           <input value={name} onChange={e=> setName(e.target.value)} type='text' placeholder='name'/>
           <input value={abv} onChange={e=> setAbv(e.target.value)} type="text" placeholder="abv"/>
           <input value={style} onChange={e=> setStyle(e.target.value)} type="text" placeholder="style"/>
@@ -47,8 +65,4 @@ function NewBeerForm({addNewBeer, user, id}) {
           <input value={comment} onChange={e=> setComment(e.target.value)} type="text" name="comment" placeholder="comment"/>
           <button type='submit'>Add New Beer</button>
         </form>
-      </div>
-    );
-  }
-  
-  export default NewBeerForm
+  </div> */}

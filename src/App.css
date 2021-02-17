@@ -1,9 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Actor&family=Cabin+Condensed&family=Courgette&family=Long+Cang&family=Philosopher:wght@700&family=Satisfy&display=swap');
 
 .App {
   text-align: center;
   background-color: rgb(226, 156, 26);
   background-position: static;
+  
 }
 
 .App-logo {
@@ -21,6 +22,7 @@
   display: grid;
   grid-template: auto 1fr auto / auto 1fr auto;
   
+  
 }
 
 img {
@@ -34,7 +36,7 @@ img {
 }
 
 .Header {
-  padding: 1rem;
+  /* padding: 1rem; */
   grid-column: 1/2;
   background-color: #13151a;
 }
@@ -52,19 +54,13 @@ img {
 }
 
 .reviewlist {
-  padding: 50px !important;
+  padding: 70px !important;
 }
 
 .beerlist {
   padding: 50px !important;
   
 }
-
-
-
-
-
-
 
 
 /* .Header {
@@ -78,13 +74,18 @@ img {
   color: white;
 } */
 
+
 .SearchBar{
-  padding: 20px;
+  float: center;
+  border: 10px;
+  margin-top: 8px;
+  margin-right: 10px;
+  font-size: 18px;
 }
 
-/* .Login{
-  padding: 100px;
-} */
+.NavBar{
+  padding: 10px;
+}
 
 .App-link {
   color: #61dafb;
@@ -98,3 +99,9 @@ img {
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+

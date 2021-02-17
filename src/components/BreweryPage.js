@@ -56,7 +56,7 @@ function BreweryPage({user}){
     return(
 
       <Grid >
-        <Grid.Column width={4} className='beerlist' style={{overflow: 'auto', maxHeight: 700 }}>
+        <Grid.Column width={4} className='beerlist' style={{overflow: 'auto', position: 'relative', maxHeight: 700, top: 40}}>
           <BeerList id={id} user={user}/>
         </Grid.Column>
         <Grid.Column width={8} className='brewerypage' border>
