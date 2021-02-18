@@ -3,7 +3,7 @@ import Review from './Review'
 import NewReviewForm from './NewReviewForm'
 import {Header, Divider, Comment, Button} from 'semantic-ui-react'
 
-function ReviewList({id, user, reviews, onAddReview, onDeleteReview, seedUsers}){
+function ReviewList({id, user, reviews, onAddReview, onDeleteReview}){
 
     const [reviewClick, setReviewClick] = useState(false)
 

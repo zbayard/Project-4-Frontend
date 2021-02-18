@@ -5,7 +5,7 @@ import ReviewList from './ReviewList.js'
 import BeerList from './BeerList.js'
 import { Grid } from 'semantic-ui-react'
 
-function BreweryPage({user, seedUsers}){
+function BreweryPage({user}){
 
     const [brewery, setBrewery] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -70,7 +70,7 @@ function BreweryPage({user, seedUsers}){
          
         </Grid.Column>
         <Grid.Column width={4} className='reviewlist'>
-          <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview} seedUsers={seedUsers}/>
+          <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview}/>
         </Grid.Column>
       </Grid>
 
