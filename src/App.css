@@ -1,9 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Actor&family=Cabin+Condensed&family=Courgette&family=Long+Cang&family=Philosopher:wght@700&family=Satisfy&display=swap');
 
+
+/* h2, h4 {
+  font-family: 'Actor' !important;
+} */
+
+/* html{
+  font-family: 'Actor' !important;
+} */
+
+
+#fonts {
+  font-family: 'Courgette', cursive;
+  font-size: 65px;
+}
+
+#featuredbeers, #reviewslist {
+  font-family: 'Courgette', cursive;
+}
+
+#brewName{
+  font-family: 'Courgette', cursive;
+  font-size: 25px;
+}
+
+.brewinfo {
+  font-family: 'Helvetica Neue', Arial, Helvetica,sans-serif;
+}
+
 .App {
   text-align: center;
   background-color: rgb(226, 156, 26);
+  background-size: auto;
   background-position: static;
+  overflow: hidden;
   
 }
 
@@ -22,7 +52,6 @@
   display: grid;
   grid-template: auto 1fr auto / auto 1fr auto;
   
-  
 }
 
 img {
@@ -40,12 +69,15 @@ img {
   grid-column: 1/2;
   background-color: #13151a;
 }
+ 
 
 .Brewery{
   width: clamp(23ch, 50%, 46);
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
+  background-color: black !important;
+  
 }
 
 .brewerypage {
@@ -53,33 +85,25 @@ img {
   
 }
 
+
 .reviewlist {
   padding: 70px !important;
+  
 }
 
 .beerlist {
   padding: 50px !important;
+  padding-bottom: 100px !important;
+  background-color: rgb(226, 156, 26);
   
 }
-
-
-/* .Header {
-  
-  min-height: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
 
 .SearchBar{
   float: center;
   border: 10px;
   margin-top: 8px;
   margin-right: 10px;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
@@ -102,6 +126,17 @@ img {
 
 
 
+
+/* .Header {
+  
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
 
 
 

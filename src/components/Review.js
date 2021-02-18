@@ -6,8 +6,7 @@ function Review({reviewObj, user, onDeleteReview}) {
 
   const { name, image} = user
 
-  console.log(user)
-  const {likes, id, content, rating } = reviewObj
+  const {likes, id, content, rating, user_id } = reviewObj
   const [likeCount, setLikeCount] = useState(likes)
 
   function handleDeleteClick(){
@@ -24,7 +23,6 @@ function Review({reviewObj, user, onDeleteReview}) {
       likes: likes + 1
     }
 
-
     fetch(`http://localhost:3000/reviews/${id}`, {
       method: 'PATCH', // or 'PUT'
       headers: {
@@ -40,8 +38,6 @@ function Review({reviewObj, user, onDeleteReview}) {
 
  
     return (
-
-      
        
         <Comment text align='left'>
           <Comment.Avatar src={image} />

@@ -36,4 +36,4 @@ export default Beer;
 </div> */}
 
 
-// TODO: Fonts, Fix Api Seed(render more breweries), navbar links, fix login,
+// TODO: Fonts, Fix Api Seed(render more breweries)

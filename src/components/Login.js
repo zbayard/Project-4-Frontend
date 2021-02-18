@@ -4,14 +4,12 @@ import {Link} from 'react-router-dom'
 
 function Login({setUser}){
 
-    const [formData, setFormData] = useState({
-        username: '',
-        password: ''
-    })
+  const [userName, setUserName] = useState('')
+  const [password, setPassword] = useState('')
    
-    function handleChange(e) {
-        setFormData({...formData, [e.target.name]: e.target.value})
-    }
+    // function handleChange(e) {
+    //     setFormData({...formData, [e.target.name]: e.target.value})
+    // }
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -36,8 +34,8 @@ function Login({setUser}){
                 iconPosition='left'
                 label='Username'
                 placeholder='Username'
-                value={formData.username} 
-                onChange={handleChange}
+                value={userName} 
+                onChange={e=> setUserName(e.target.value)}
               />
               <Form.Input
                 icon='lock'
@@ -45,12 +43,12 @@ function Login({setUser}){
                 label='Password'
                 type='password'
                 placeholder='Password'
-                value={formData.password} 
-                onChange={handleChange}
+                value={password} 
+                onChange={e=> setPassword(e.target.value)}
               />
               {/* <Button type='submit' basic color='yellow' as="Link" to="/breweries">Login</Button> */}
               {/* <Button basic color='yellow' content='Login'  /> */}
-              <Link basic color='yellow' type='submit' to='/breweries'>Login</Link>
+              <Button basic color='yellow' type='submit' as={Link} to='/breweries'>Login</Button>
             </Form>
           </Grid.Column>
         

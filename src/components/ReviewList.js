@@ -3,7 +3,7 @@ import Review from './Review'
 import NewReviewForm from './NewReviewForm'
 import {Header, Divider, Comment, Button} from 'semantic-ui-react'
 
-function ReviewList({id, user, reviews, onAddReview, onDeleteReview}){
+function ReviewList({id, user, reviews, onAddReview, onDeleteReview, seedUsers}){
 
     const [reviewClick, setReviewClick] = useState(false)
 
@@ -18,7 +18,7 @@ function ReviewList({id, user, reviews, onAddReview, onDeleteReview}){
     return (
        
         <Comment.Group>
-            <Header as='h2' dividing>
+            <Header as='h2' id='reviewslist' dividing>
                 Reviews 
             </Header>
             {reviewsToDisplay}

@@ -12,22 +12,22 @@ function Brewery ({brewery}) {
   const {id, name, brewery_type, city, state, website_url} = brewery
     return (
       // <div className="Brewery">
-      <Card>
-    <Card.Content>
-      <Card.Header>{name}</Card.Header>
-      <Card.Meta>
-        <span className='location'>{city}, {state}</span>
-      </Card.Meta>
-      <Card.Description>
-        <Link to={`/breweries/${id}`}>{`More Info on ${name}`}</Link>
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='beer' />
-        {brewery_type}
-      </a>
-    </Card.Content>
+      <Card fluid color='black'>
+      <Card.Content >
+        <Card.Header id='brewName'>{name}</Card.Header>
+        <Card.Meta>
+          <span className='location'>{city}, {state}</span>
+        </Card.Meta>
+        <Card.Description>
+          <Link to={`/breweries/${id}`}>{`More Info on ${name}`}</Link>
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <a>
+          <Icon name='beer' />
+          {brewery_type}
+        </a>
+      </Card.Content>
   </Card>
     );
   }

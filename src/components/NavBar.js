@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import {Button} from 'semantic-ui-react'
 
 function NavBar({user, setUser}) {
 
@@ -12,9 +13,9 @@ function NavBar({user, setUser}) {
       <nav className="NavBar">
         {user ? (
           <>
-            <Link to="/breweries"> Breweries </Link>
-            <Link to="/profile"> Profile </Link>
-            <Link to='/login' onClick={handleLogout}> Logout </Link>
+            <Button inverted color='black' as={Link} to="/breweries"> Breweries </Button>
+            <Button inverted color='black' as={Link} to="/profile"> Profile </Button>
+            <Button inverted color='black' as={Link} to='/login' onClick={handleLogout}> Logout </Button>
           </>
         ) : null }
         

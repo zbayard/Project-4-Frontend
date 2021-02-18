@@ -5,7 +5,7 @@ import ReviewList from './ReviewList.js'
 import BeerList from './BeerList.js'
 import { Grid } from 'semantic-ui-react'
 
-function BreweryPage({user}){
+function BreweryPage({user, seedUsers}){
 
     const [brewery, setBrewery] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -60,14 +60,17 @@ function BreweryPage({user}){
           <BeerList id={id} user={user}/>
         </Grid.Column>
         <Grid.Column width={8} className='brewerypage' border>
-          <h1>{name}</h1>
-          <h3><Icon name='beer' />{brewery_type}</h3>
-          <h3><Icon name='map marker alternate'/> {street} - {city}, {state} {postal_code}</h3>
-          <h3><Icon name='phone'/> {phone} </h3>
-          <h3><Icon name='address card outline'/><a href={website_url} target='_blank'>Visit Website</a></h3> 
+          <h1 id='fonts'>{name}</h1>
+          
+          <h3 className='brewinfo'><Icon name='beer' />{brewery_type}</h3>
+          <h3 className='brewinfo'><Icon name='map marker alternate'/> {street} </h3>
+          <h3 className='brewinfo'> {city}, {state} {postal_code}</h3>
+          <h3 className='brewinfo'><Icon name='phone'/> {phone} </h3>
+          <h3 className='brewinfo'><Icon name='address card outline'/><a href={website_url} target='_blank'>Visit Website</a></h3> 
+         
         </Grid.Column>
         <Grid.Column width={4} className='reviewlist'>
-          <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview}/>
+          <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview} seedUsers={seedUsers}/>
         </Grid.Column>
       </Grid>
 

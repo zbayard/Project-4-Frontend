@@ -42,7 +42,7 @@ function BeerList({user, id}) {
 
     return (
       <div className="BeerList">
-           <Header as='h2' dividing>
+           <Header as='h2' id='featuredbeers' dividing>
             Featured Beers
           </Header>
         {beersToDisplay}

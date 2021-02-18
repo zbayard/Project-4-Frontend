@@ -3,6 +3,7 @@ import React,{useEffect, useState} from 'react'
 import {Switch, Route} from 'react-router-dom'
 import logo from '../logo.svg';
 import '../App.css';
+import '../index.css'
 import Header from './Header.js'
 import Login from './Login.js'
 import SignUp from './SignUp.js'
@@ -16,6 +17,7 @@ function App() {
   const [breweries, setBreweries] = useState([])
   const [search, setSearch] = useState('')
   const [user, setUser] = useState(null)
+  const [seedUsers, setSeedUsers] = useState([])
 
   const filteredBreweries = breweries.filter(brewery=> brewery.city.toLowerCase().includes(search.toLowerCase()))
 
@@ -26,6 +28,13 @@ function App() {
     .then(user => setUser(user))
   }, [])
 
+
+//fetch all users 
+  useEffect(()=>{
+    fetch("http://localhost:3000/users")
+    .then(res=>res.json())
+    .then(data=>setSeedUsers(data))
+  },[])
 
 // fetch all breweries 
   useEffect(()=>{
@@ -56,7 +65,7 @@ function App() {
             <BreweryList breweries={filteredBreweries} />
           </Route>
           <Route path="/breweries/:id">
-            <BreweryPage user={user} />
+            <BreweryPage user={user} seedUsers={seedUsers}/>
           </Route>
         </Switch>
       </div>
