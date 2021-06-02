@@ -36,7 +36,7 @@ function NewReviewForm({user, breweryID, onAddReview, setReviewClick}) {
     function handleRateChange(e, { rating }) {
         e.preventDefault();
         setRating(rating);
-      }
+    }
 
     return (
         

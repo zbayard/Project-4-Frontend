@@ -85,14 +85,3 @@ export default BreweryPage;
 
 
 
-{/* <div className='BreweryPage'>
-          
-<h1>{name}</h1>
-<h3><Icon name='beer' />{brewery_type}</p>
-<p><Icon name='map marker alternate'/> {street} - {city}, {state} {postal_code}</p>
-<p><Icon name='phone'/> {phone} </p>
-<p><Icon name='address card outline'/><a href={website_url} target='_blank'>Visit Website</a></p>
-  <ReviewList id={id} user={user} reviews={filteredReviews} onAddReview={onAddReview} onDeleteReview={handleDeleteReview}/>
-  <BeerList id={id} user={user}/>
-
-</div>  */}
