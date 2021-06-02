@@ -33,22 +33,3 @@ function Brewery ({brewery}) {
   }
   
   export default Brewery;
-
-
-
-
-
-
-
-
-//   <div className='ui four cards'>
-//   <div className='card'>
-//     <h1>{name}</h1>
-//     <p>Type: {brewery_type}</p>
-//     <p>Located: {city}, {state}</p>
-//     {/* Website: <a href={website_url} target='_blank'> {website_url}</a> */}
-//     <p>
-//       <Link to={`/breweries/${id}`}>{`More Info on ${name}`}</Link>
-//     </p>
-//   </div>
-// </div>

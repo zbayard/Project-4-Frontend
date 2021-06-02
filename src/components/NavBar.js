@@ -5,7 +5,6 @@ function NavBar({user, setUser}) {
 
   function handleLogout(){
     setUser(null)
-
   }
 
     return (
