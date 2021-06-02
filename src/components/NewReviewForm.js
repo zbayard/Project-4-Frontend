@@ -54,13 +54,3 @@ function NewReviewForm({user, breweryID, onAddReview, setReviewClick}) {
   
   export default NewReviewForm;
 
-
-
-  // <div className="ReviewForm">
-  //         <h5>Leave a Review:</h5>
-  //         <form onSubmit={handleSubmitReview}>
-            
-  //           <input value={content} onChange={e=> setContent(e.target.value)} type='textarea' placeholder='leave a comment about this brewery'/>
-  //           <button type='submit'>Submit</button>
-  //         </form>
-  // </div>

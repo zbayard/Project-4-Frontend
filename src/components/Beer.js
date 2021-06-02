@@ -26,14 +26,3 @@ export default Beer;
 
 
 
-{/* <div className='Beer'>
-<h4>{beer.name}</h4>
-<img src={beer.image} alt='pic of beer'></img>
-<p><strong>Style:</strong>  {beer.style}</p>
-<p><strong>ABV:</strong> {beer.abv}% </p>
-<p>{beer.comment}</p>
-
-</div> */}
-
-
-// TODO: Fonts, Fix Api Seed(render more breweries)
