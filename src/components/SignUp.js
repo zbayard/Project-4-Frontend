@@ -9,8 +9,6 @@ function SignUp(){
         console.log('hello')
     }
 
-   
-
     return(
         <Segment placeholder>
             <Grid columns={1} relaxed='very' stackable>

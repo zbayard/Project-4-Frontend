@@ -58,12 +58,3 @@ function Review({reviewObj, user, onDeleteReview}) {
   }
   
   export default Review;
-
-
-  
-      // <div className="Review">
-      //   <p>{content}</p>
-      //   <p> - {username}</p>
-      //   <button onClick={handleLike}>{likeCount} 👍</button>
-      //   <button onClick={handleDeleteClick}> Delete Comment </button>
-      // </div>

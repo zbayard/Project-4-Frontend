@@ -53,14 +53,3 @@ function Profile({user, /*setUser*/}) {
   
   export default Profile;
 
-
-//   <div className="Profile">
-//   <h1>PROFILE </h1>
-//   <p>{username}</p>
-//   <img src={image} alt="image here"></img>
-//   <p>{name}</p>
-//   <p>{bio}</p>
-//   <p>favorite breweries</p>
-//   <p>uploaded beers?</p>
-  
-// </div>

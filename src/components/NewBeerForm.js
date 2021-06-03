@@ -56,13 +56,3 @@ function NewBeerForm({setIsClicked, addNewBeer, user, id}) {
   
   export default NewBeerForm
 
-  // <div className="BeerForm">
-        {/* <form onSubmit={handleSubmit}>
-          <input value={name} onChange={e=> setName(e.target.value)} type='text' placeholder='name'/>
-          <input value={abv} onChange={e=> setAbv(e.target.value)} type="text" placeholder="abv"/>
-          <input value={style} onChange={e=> setStyle(e.target.value)} type="text" placeholder="style"/>
-          <input value={image} onChange={e=> setImage(e.target.value)} type="text" name="image" placeholder="image" src=" "/>
-          <input value={comment} onChange={e=> setComment(e.target.value)} type="text" name="comment" placeholder="comment"/>
-          <button type='submit'>Add New Beer</button>
-        </form>
-  </div> */}

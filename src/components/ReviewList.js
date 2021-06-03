@@ -32,13 +32,3 @@ function ReviewList({id, user, reviews, onAddReview, onDeleteReview}){
 };
 
 export default ReviewList;
-
-
-
-
-/* <div className='ReviewList'>
-<h1>Review List</h1>
-
-<button onClick={handleReviewClick}>Review This Brewery</button>
-{reviewClick ? <NewReviewForm user={user} breweryID={id} onAddReview={onAddReview}/>: null}
-</div> */
